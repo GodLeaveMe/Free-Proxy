@@ -1,0 +1,764 @@
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 基础数据 设置锚点 复用
+BASE-DATA:
+  common:
+    health-check-url: &health-check-url https://www.gstatic.com/generate_204
+    proxies-all: &proxies-all
+      - 国外流量
+      - 直接连接
+      - 🇭🇰 HongKong
+      - 🇨🇳 TaiWan
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇰🇷 Korea
+      - 🇺🇸 US
+      - 🇮🇳 India
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇷🇺 Russia
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+      - AIRPORT
+      - ProxyChain
+    proxies-all-fdirect: &proxies-all-fdirect
+      - 直接连接
+      - 国外流量
+      - 🇭🇰 HongKong
+      - 🇨🇳 TaiWan
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇰🇷 Korea
+      - 🇺🇸 US
+      - 🇮🇳 India
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇷🇺 Russia
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+      - AIRPORT
+      - ProxyChain
+    proxies-all-oforeign: &proxies-all-oforeign
+      - 🇭🇰 HongKong
+      - 🇨🇳 TaiWan
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇰🇷 Korea
+      - 🇺🇸 US
+      - 🇮🇳 India
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇷🇺 Russia
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+      - AIRPORT
+      - ProxyChain
+    proxies-all-for-tiktok: &proxies-all-for-tiktok
+      - 🇺🇸 US
+      - 国外流量
+      - AIRPORT
+      - 🇭🇰 HongKong
+      - 🇨🇳 TaiWan
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇰🇷 Korea
+      - 🇮🇳 India
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇷🇺 Russia
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+    proxies-all-for-openai: &proxies-all-for-openai
+      - 🇰🇷 Korea
+      - 🇯🇵 Japan
+      - 🇺🇸 US
+      - 🇸🇬 Singapore
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+      - AIRPORT
+    proxies-all-for-proxychain: &proxies-all-for-proxychain
+      - 🇭🇰 HongKong
+      - 🇨🇳 TaiWan
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇰🇷 Korea
+      - 🇺🇸 US
+      - 🇮🇳 India
+      - 🇬🇧 UK
+      - 🇮🇪 Ireland
+      - 🇷🇺 Russia
+      - 🇨🇦 Canada
+      - 🇫🇷 France
+      - 🇦🇺 Australia
+      - AIRPORT
+  
+  proxy-providers-config:
+    proxy-providers-use: &proxy-providers-use
+      - 1airport
+      - 2airport
+      - 3airport
+      - 4airport
+      - 5airport
+      - 6airport
+      - 7airport
+      - 8airport
+      - 9airport
+    proxy-providers-common:
+      airport-interval: &airport-interval 84600
+      url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
+      proxy-file-path-1airport: &proxy-file-path-1airport myprovider/free-proxies/provider-1airport.yml
+      url-2airport: &url-2airport "https://owo.o00o.ooo/ooo" # 这里填入机场链接
+      proxy-file-path-2airport: &proxy-file-path-2airport myprovider/free-proxies/provider-2airport.yml
+      url-3airport: &url-3airport "https://mxlsub.me/free" # 这里填入机场链接
+      proxy-file-path-3airport: &proxy-file-path-3airport myprovider/free-proxies/provider-3airport.yml
+      url-4airport: &url-4airport "https://mxlsub.me/newfull" # 这里填入机场链接
+      proxy-file-path-4airport: &proxy-file-path-4airport myprovider/free-proxies/provider-4airport.yml
+      url-5airport: &url-5airport "https://mcvless.sosorg.nyc.mn/MS666" # 这里填入机场链接
+      proxy-file-path-5airport: &proxy-file-path-5airport myprovider/free-proxies/provider-5airport.yml
+      url-6airport: &url-6airport "https://mctrojan.sosorg.nyc.mn/MS666" # 这里填入机场链接
+      proxy-file-path-6airport: &proxy-file-path-6airport myprovider/free-proxies/provider-6airport.yml
+      url-7airport: &url-7airport "https://vless.durl.nyc.mn/zrf" # 这里填入机场链接
+      proxy-file-path-7airport: &proxy-file-path-7airport myprovider/free-proxies/provider-7airport.yml
+      url-8airport: &url-8airport "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml" # 这里填入机
+      proxy-file-path-8airport: &proxy-file-path-8airport myprovider/free-proxies/provider-8airport.yml
+      url-9airport: &url-9airport "https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false"
+      proxy-file-path-9airport: &proxy-file-path-9airport myprovider/free-proxies/provider-9airport.yml
+  proxy-providers-filter:
+    proxy-filter-HK: &proxy-filter-HK "港|HK|HongKong|Hong Kong"
+    proxy-filter-TW: &proxy-filter-TW "台湾|TW|Taiwan"
+    proxy-filter-SG: &proxy-filter-SG "新加坡|SG|Singapore"
+    proxy-filter-JP: &proxy-filter-JP "日本|JP|Japan"
+    proxy-filter-FR: &proxy-filter-FR "法国|FR|France"
+    proxy-filter-AU: &proxy-filter-AU "澳大利亚|AU|Australia"
+    proxy-filter-Ireland: &proxy-filter-Ireland "爱尔兰|Ireland"
+    proxy-filter-EN: &proxy-filter-EN "英国|UK|Britain|England"
+    proxy-filter-Korea: &proxy-filter-Korea "韩国|KR|Korean"
+    proxy-filter-RU: &proxy-filter-RU "俄罗斯|RU|Russia"
+    proxy-filter-US: &proxy-filter-US "美国|US|United States|America"
+    proxy-filter-Canada: &proxy-filter-Canada "加拿大|CA|Canada"
+    proxy-filter-India: &proxy-filter-India "印度|IN|India"
+
+  rule-providers-config:
+    rule-providers-common:
+      rule-interval: &rule-interval 84600
+    rule-providers-group:
+      AdBlock:
+        rule-file-path-AdBlock: &rule-file-path-AdBlock myprovider/ruleset/AdBlock.yaml
+        rule-provider-url-AdBlock: &rule-provider-url-AdBlock https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/AdBlock.yaml
+      Apple:
+        rule-file-path-Apple: &rule-file-path-Apple myprovider/ruleset/Apple.yaml
+        rule-provider-url-Apple: &rule-provider-url-Apple https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Apple.yaml
+      China:
+        rule-file-path-China: &rule-file-path-China myprovider/ruleset/China.yaml
+        rule-provider-url-China: &rule-provider-url-China https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/China.yaml
+      Bilibili:
+        rule-file-path-Bilibili: &rule-file-path-BiliBili myprovider/ruleset/Bilibili.yaml
+        rule-provider-url-BiliBili: &rule-provider-url-BiliBili https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Bilibili.yaml
+      Facebook:
+        rule-file-path-Facebook: &rule-file-path-Facebook myprovider/ruleset/Facebook.yaml
+        rule-provider-url-Facebook: &rule-provider-url-Facebook https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Facebook.yaml
+      GitHub:
+        rule-file-path-GitHub: &rule-file-path-GitHub myprovider/ruleset/GitHub.yaml
+        rule-provider-url-GitHub: &rule-provider-url-GitHub https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/GitHub.yaml
+      Google:
+        rule-file-path-Google: &rule-file-path-Google myprovider/ruleset/Google.yaml
+        rule-provider-url-Google: &rule-provider-url-Google https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Google.yaml
+      NewBing:
+        rule-file-path-NewBing: &rule-file-path-NewBing myprovider/ruleset/NewBing.yaml
+        rule-provider-url-NewBing: &rule-provider-url-NewBing https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/NewBing.yaml
+      OpenAI:
+        rule-file-path-OpenAI: &rule-file-path-OpenAI myprovider/ruleset/OpenAI.yaml
+        rule-provider-url-OpenAI: &rule-provider-url-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OpenAI.yaml
+      Spotify:
+        rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
+        rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
+      Speedtest:
+        rule-file-path-Speedtest: &rule-file-path-Speedtest myprovider/ruleset/Speedtest.yaml
+        rule-provider-url-Speedtest: &rule-provider-url-Speedtest https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Speedtest.yaml
+      Telegram:
+        rule-file-path-Telegram: &rule-file-path-Telegram myprovider/ruleset/Telegram.yaml
+        rule-provider-url-Telegram: &rule-provider-url-Telegram https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Telegram.yaml
+      Twitter:
+        rule-file-path-Twitter: &rule-file-path-Twitter myprovider/ruleset/Twitter.yaml
+        rule-provider-url-Twitter: &rule-provider-url-Twitter https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Twitter.yaml
+      Tencent:
+        rule-file-path-Tencent: &rule-file-path-Tencent myprovider/ruleset/Tencent.yaml
+        rule-provider-url-Tencent: &rule-provider-url-Tencent https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Tencent.yaml
+      YouTube:
+        rule-file-path-YouTube: &rule-file-path-YouTube myprovider/ruleset/YouTube.yaml
+        rule-provider-url-YouTube: &rule-provider-url-YouTube https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/YouTube.yaml
+      TikTok:
+        rule-file-path-TikTok: &rule-file-path-TikTok myprovider/ruleset/TikTok.yaml
+        rule-provider-url-TikTok: &rule-provider-url-TikTok https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/TikTok.yaml
+      Discord:
+        rule-file-path-Discord: &rule-file-path-Discord myprovider/ruleset/Discord.yaml
+        rule-provider-url-Discord: &rule-provider-url-Discord https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Discord.yaml
+      Proxy:
+        rule-file-path-Proxy: &rule-file-path-Proxy myprovider/ruleset/Proxy.yaml
+        rule-provider-url-Proxy: &rule-provider-url-Proxy https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Proxy.yaml
+      ProxyClient:
+        rule-file-path-ProxyClient: &rule-file-path-ProxyClient myprovider/ruleset/ProxyClient.yaml
+        rule-provider-url-ProxyClient: &rule-provider-url-ProxyClient https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml
+      Direct:
+        rule-file-path-Direct: &rule-file-path-Direct myprovider/ruleset/Direct.yaml
+        rule-provider-url-Direct: &rule-provider-url-Direct https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Direct.yaml
+      
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: '0.0.0.0:9090'
+  
+# DNS 服务器配置(可选；若不配置，程序内置的 DNS 服务会被关闭)
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true # 当此选项为 false 时, AAAA 请求将返回空
+  
+  default-nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+    - 8.8.8.8
+    - 1.1.1.1
+  enhanced-mode: fake-ip # 或 redir-host
+  fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
+  
+  fake-ip-filter:
+    # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.edu.cn'
+    - 'time.*.apple.com'
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - 'time1.cloud.tencent.com'
+    - 'music.163.com'
+    - '*.music.163.com'
+    - '*.126.net'
+    - 'musicapi.taihe.com'
+    - 'music.taihe.com'
+    - 'songsearch.kugou.com'
+    - 'trackercdn.kugou.com'
+    - '*.kuwo.cn'
+    - 'api-jooxtt.sanook.com'
+    - 'api.joox.com'
+    - 'joox.com'
+    - 'y.qq.com'
+    - '*.y.qq.com'
+    - 'streamoc.music.tc.qq.com'
+    - 'mobileoc.music.tc.qq.com'
+    - 'isure.stream.qqmusic.qq.com'
+    - 'dl.stream.qqmusic.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - 'amobile.music.tc.qq.com'
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - 'music.migu.cn'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - 'msftconnecttest.com'
+    - 'msftncsi.com'
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - 'xbox.*.microsoft.com'
+    - '*.*.xboxlive.com'
+    - '+.battlenet.com.cn'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
+    - 'proxy.golang.org'
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - 'heartbeat.belkin.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - 'mesu.apple.com'
+    - 'swscan.apple.com'
+    - 'swquery.apple.com'
+    - 'swdownload.apple.com'
+    - 'swcdn.apple.com'
+    - 'swdist.apple.com'
+    - 'lens.l.google.com'
+    - 'stun.l.google.com'
+    - '+.nflxvideo.net'
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - WORKGROUP
+
+
+  nameserver:
+    - https://dns.alidns.com/dns-query  # 阿里DNS DoH
+    - https://doh.pub/dns-query  # 公共 DoH
+    - https://1.1.1.1/dns-query  # Cloudflare DoH
+    - https://1.0.0.1/dns-query  # Cloudflare备用 DoH
+    - https://208.67.222.222/dns-query  # OpenDNS DoH
+    - https://208.67.220.220/dns-query  # OpenDNS备用 DoH
+  
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.githubusercontent.com'
+      - '+.googlevideo.com'
+  
+profile:
+  store-selected: true
+  tracing: true
+  
+proxies:
+
+proxy-groups:
+  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
+  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
+  - name: 国外流量
+    type: select
+    proxies: *proxies-all-oforeign
+  - name: 其他流量
+    type: select
+    proxies: *proxies-all
+  - name: Telegram
+    type: select
+    proxies: *proxies-all
+  - name: Discord
+    type: select
+    proxies: *proxies-all
+  - name: Facebook
+    type: select
+    proxies: *proxies-all
+  - name: OpenAI
+    type: select
+    proxies: *proxies-all-for-openai
+  - name: Youtube
+    type: select
+    proxies: *proxies-all
+  - name: TikTok
+    type: select
+    proxies: *proxies-all-for-tiktok
+  - name: 哔哩哔哩
+    type: select
+    proxies: *proxies-all-fdirect
+  - name: 国外媒体
+    type: select
+    proxies: *proxies-all
+  - name: Spotify
+    type: select
+    proxies: *proxies-all
+  - name: NewBing
+    type: select
+    proxies: *proxies-all
+  - name: Speedtest
+    type: select
+    proxies: *proxies-all-fdirect  
+  - name: 苹果服务
+    type: select
+    proxies: *proxies-all-fdirect
+  - name: 直接连接
+    type: select
+    hidden: true
+    proxies:
+      - DIRECT
+  - name: AIRPORT
+    type: url-test
+    interval: 150
+    use: *proxy-providers-use
+  - name: 🇭🇰 HongKong
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-HK
+    use: *proxy-providers-use
+  - name: 🇨🇳 TaiWan
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-TW
+    use: *proxy-providers-use
+  - name: 🇸🇬 Singapore
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-SG
+    use: *proxy-providers-use
+  - name: 🇯🇵 Japan
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-JP
+    use: *proxy-providers-use
+  - name: 🇰🇷 Korea
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-Korea
+    use: *proxy-providers-use
+  - name: 🇺🇸 US
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-US
+    use: *proxy-providers-use
+  - name: 🇮🇳 India
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-India
+    use: *proxy-providers-use
+  - name: 🇬🇧 UK
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-EN
+    use: *proxy-providers-use
+  - name: 🇮🇪 Ireland
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-Ireland
+    use: *proxy-providers-use
+  - name: 🇷🇺 Russia
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-RU
+    use: *proxy-providers-use
+  - name: 🇨🇦 Canada
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-Canada
+    use: *proxy-providers-use
+  - name: 🇫🇷 France
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-FR
+    use: *proxy-providers-use
+  - name: 🇦🇺 Australia
+    type: url-test
+    interval: 150
+    filter: *proxy-filter-AU
+    use: *proxy-providers-use
+  - name: ProxyChain_Start
+    type: url-test
+    interval: 150
+    proxies: *proxies-all-for-proxychain
+  - name: ProxyChain_Landing
+    type: url-test
+    proxies: *proxies-all-for-proxychain
+  - name: ProxyChain
+    type: relay
+    # disable-udp: true
+    proxies:
+      - ProxyChain_Start
+      - ProxyChain_Landing
+proxy-providers:
+  1airport:
+    type: http
+    url: *url-1airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P1|
+    path: *proxy-file-path-1airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  2airport:
+    type: http
+    url: *url-2airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P2|
+    path: *proxy-file-path-2airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  3airport:
+    type: http
+    url: *url-3airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P3|
+    path: *proxy-file-path-3airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  4airport:
+    type: http
+    url: *url-4airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P4|
+    path: *proxy-file-path-4airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  5airport:
+    type: http
+    url: *url-5airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P5|
+    path: *proxy-file-path-5airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  6airport:
+    type: http
+    url: *url-6airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P6|
+    path: *proxy-file-path-6airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  7airport:
+    type: http
+    url: *url-7airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P7|
+    path: *proxy-file-path-7airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  8airport:
+    type: http
+    url: *url-8airport 
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P8|
+    path: *proxy-file-path-8airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  9airport:
+    type: http
+    url: *url-9airport
+    interval: *airport-interval
+    override: 
+      'additional-prefix': P9|
+    path: *proxy-file-path-9airport
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+
+rules:
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,国外流量
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,ProxyClient,DIRECT
+  - RULE-SET,AdBlock,REJECT
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,BiliBili,哔哩哔哩
+  - RULE-SET,GitHub,国外流量
+  - RULE-SET,Google,国外流量
+  - RULE-SET,NewBing,NewBing
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Speedtest,Speedtest
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,国外流量
+  - RULE-SET,Tencent,直接连接
+  - RULE-SET,YouTube,Youtube
+  - RULE-SET,Discord,Discord
+  - RULE-SET,Facebook,Facebook
+  - RULE-SET,Proxy,国外流量
+  - RULE-SET,Direct,DIRECT
+  - DOMAIN-SUFFIX,live.cn,直接连接
+  - GEOIP,CN,DIRECT
+  - MATCH,其他流量
+
+rule-providers:
+  AdBlock:
+    type: http
+    behavior: classical
+    path: *rule-file-path-AdBlock
+    url: *rule-provider-url-AdBlock
+    interval: *rule-interval
+  Apple:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Apple
+    url: *rule-provider-url-Apple
+    interval: *rule-interval
+  China:
+    type: http
+    behavior: classical
+    path: *rule-file-path-China
+    url: *rule-provider-url-China
+    interval: *rule-interval
+  BiliBili:
+    type: http
+    behavior: classical
+    path: *rule-file-path-BiliBili
+    url: *rule-provider-url-BiliBili
+    interval: *rule-interval
+  Facebook:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Facebook
+    url: *rule-provider-url-Facebook
+    interval: *rule-interval
+  GitHub:
+    type: http
+    behavior: classical
+    path: *rule-file-path-GitHub
+    url: *rule-provider-url-GitHub
+    interval: *rule-interval
+  Google:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Google
+    url: *rule-provider-url-Google
+    interval: *rule-interval
+  OpenAI:
+    type: http
+    behavior: classical
+    path: *rule-file-path-OpenAI
+    url: *rule-provider-url-OpenAI
+    interval: *rule-interval
+  NewBing:
+    type: http
+    behavior: classical
+    path: *rule-file-path-NewBing
+    url: *rule-provider-url-NewBing
+    interval: *rule-interval
+  Spotify:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Spotify
+    url: *rule-provider-url-Spotify
+    interval: *rule-interval
+  Speedtest: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-Speedtest
+    url: *rule-provider-url-Speedtest
+    interval: *rule-interval
+  Telegram:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Telegram
+    url: *rule-provider-url-Telegram
+    interval: *rule-interval
+  Twitter:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Twitter
+    url: *rule-provider-url-Twitter
+    interval: *rule-interval
+  Tencent:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Tencent
+    url: *rule-provider-url-Tencent
+    interval: *rule-interval
+  YouTube:
+    type: http
+    behavior: classical
+    path: *rule-file-path-YouTube
+    url: *rule-provider-url-YouTube
+    interval: *rule-interval
+  TikTok:
+    type: http
+    behavior: classical
+    path: *rule-file-path-TikTok
+    url: *rule-provider-url-TikTok
+    interval: *rule-interval
+  Discord:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Discord
+    url: *rule-provider-url-Discord
+    interval: *rule-interval
+  Proxy:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Proxy
+    url: *rule-provider-url-Proxy
+    interval: *rule-interval
+  ProxyClient:
+    type: http
+    behavior: classical
+    path: *rule-file-path-ProxyClient
+    url: *rule-provider-url-ProxyClient
+    interval: *rule-interval
+  Direct:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Direct
+    url: *rule-provider-url-Direct
+    interval: *rule-interval
