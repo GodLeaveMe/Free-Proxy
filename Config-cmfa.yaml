@@ -111,7 +111,7 @@ BASE-DATA:
       - 9airport
     proxy-providers-common:
       airport-interval: &airport-interval 84600
-      url-1airport: &url-1airport "" # 这里填入机场链接
+      url-1airport: &url-1airport "https://zrf.durl.nyc.mn/b79a076e-d676-4a58-9c0e-f25113921741" # 这里填入机场链接
       proxy-file-path-1airport: &proxy-file-path-1airport myprovider/free-proxies/provider-1airport.yml
       url-2airport: &url-2airport "https://oxo.o00o.ooo/ooo" # 这里填入机场链接
       proxy-file-path-2airport: &proxy-file-path-2airport myprovider/free-proxies/provider-2airport.yml
