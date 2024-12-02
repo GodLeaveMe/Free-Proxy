@@ -159,11 +159,11 @@
         proxy-file-path-3airport: &proxy-file-path-3airport myprovider/free-proxies/provider-3airport.yml
         url-4airport: &url-4airport "https://mxlsub.me/newfull"
         proxy-file-path-4airport: &proxy-file-path-4airport myprovider/free-proxies/provider-4airport.yml
-        url-5airport: &url-5airport "https://mcvless.sosorg.nyc.mn/MS666"
+        url-5airport: &url-5airport "https://soso.sosorg.nyc.mn/SOSO"
         proxy-file-path-5airport: &proxy-file-path-5airport myprovider/free-proxies/provider-5airport.yml
-        url-6airport: &url-6airport "https://mctrojan.sosorg.nyc.mn/MS666"
+        url-6airport: &url-6airport "https://sosotrojan.sosorg.nyc.mn/SOSO"
         proxy-file-path-6airport: &proxy-file-path-6airport myprovider/free-proxies/provider-6airport.yml
-        url-7airport: &url-7airport "https://vless.durl.nyc.mn/zrf"
+        url-7airport: &url-7airport "https://zrf.durl.nyc.mn/b79a076e-d676-4a58-9c0e-f25113921741"
         proxy-file-path-7airport: &proxy-file-path-7airport myprovider/free-proxies/provider-7airport.yml
         url-8airport: &url-8airport "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml" # 这里填入机场链接
         proxy-file-path-8airport: &proxy-file-path-8airport myprovider/free-proxies/provider-8airport.yml
