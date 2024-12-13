@@ -169,6 +169,10 @@
         proxy-file-path-8airport: &proxy-file-path-8airport myprovider/free-proxies/provider-8airport.yml
         url-9airport: &url-9airport "https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false"
         proxy-file-path-9airport: &proxy-file-path-9airport myprovider/free-proxies/provider-9airport.yml
+        url-10airport: &url-10airport "https://qmsdh.com.877774.xyz/vless/"
+        proxy-file-path-10airport: &proxy-file-path-10airport myprovider/free-proxies/provider-10airport.yml
+        url-11airport: &url-11airport "https://qmsdh.com.877774.xyz/trojan/"
+        proxy-file-path-11airport: &proxy-file-path-11airport myprovider/free-proxies/provider-11airport.yml
         url-add-on: &url-add-on "" # 这里填入第二个机场链接
         proxy-file-path-Add-On: &proxy-file-path-Add-On myprovider/free-proxies/provider-add-on.yml
         url-warp: &url-warp "" # 这里填入直接托管的WARP配置
@@ -1051,6 +1055,31 @@
         interval: *airport-interval
         # lazy: true
         url: *health-check-url
+    10airport:
+      type: http
+      url: *url-10airport
+      interval: *airport-interval
+      override: 
+        'additional-prefix': P10|
+      path: *proxy-file-path-10airport
+      health-check:
+        enable: true
+        interval: *airport-interval
+        # lazy: true
+        url: *health-check-url
+    11airport:
+      type: http
+      url: *url-11airport
+      interval: *airport-interval
+      override: 
+        'additional-prefix': P11|
+      path: *proxy-file-path-11airport
+      health-check:
+        enable: true
+        interval: *airport-interval
+        # lazy: true
+        url: *health-check-url
+      
     # add-on:
     #   type: http
     #   url: *url-add-on
