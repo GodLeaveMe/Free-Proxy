@@ -109,6 +109,8 @@ BASE-DATA:
       - 7airport
       - 8airport
       - 9airport
+      - 10airport
+      - 11airport
     proxy-providers-common:
       airport-interval: &airport-interval 84600
       url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
