@@ -109,8 +109,6 @@ BASE-DATA:
       - 7airport
       - 8airport
       - 9airport
-      - 10airport
-      - 11airport
     proxy-providers-common:
       airport-interval: &airport-interval 84600
       url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
@@ -131,9 +129,9 @@ BASE-DATA:
       proxy-file-path-8airport: &proxy-file-path-8airport myprovider/free-proxies/provider-8airport.yml
       url-9airport: &url-9airport "https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false"
       proxy-file-path-9airport: &proxy-file-path-9airport myprovider/free-proxies/provider-9airport.yml
-      url-10airport: &url-10airport "https://qmsdh.com.877774.xyz/vless/"
+      url-10airport: &url-10airport ""
       proxy-file-path-10airport: &proxy-file-path-10airport myprovider/free-proxies/provider-10airport.yml
-      url-11airport: &url-11airport "https://qmsdh.com.877774.xyz/trojan/"
+      url-11airport: &url-11airport ""
       proxy-file-path-11airport: &proxy-file-path-11airport myprovider/free-proxies/provider-11airport.yml
   proxy-providers-filter:
     proxy-filter-HK: &proxy-filter-HK "港|HK|HongKong|Hong Kong"
@@ -618,30 +616,30 @@ proxy-providers:
       interval: *airport-interval
       # lazy: true
       url: *health-check-url
-  10airport:
-    type: http
-    url: *url-10airport
-    interval: *airport-interval
-    override: 
-      'additional-prefix': P10|
-    path: *proxy-file-path-10airport
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  11airport:
-    type: http
-    url: *url-11airport
-    interval: *airport-interval
-    override: 
-      'additional-prefix': P11|
-    path: *proxy-file-path-11airport
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
+  #10airport:
+  #  type: http
+  #  url: *url-10airport
+  #  interval: *airport-interval
+  #  override: 
+  #    'additional-prefix': P10|
+  #  path: *proxy-file-path-10airport
+  #  health-check:
+  #    enable: true
+  #    interval: *airport-interval
+  #    # lazy: true
+  #    url: *health-check-url
+  #11airport:
+  #  type: http
+  #  url: *url-11airport
+  #  interval: *airport-interval
+  #  override: 
+  #    'additional-prefix': P11|
+  #  path: *proxy-file-path-11airport
+  #  health-check:
+  #    enable: true
+  #    interval: *airport-interval
+  #    # lazy: true
+  #    url: *health-check-url
 
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
