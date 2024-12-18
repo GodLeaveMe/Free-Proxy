@@ -1,4 +1,4 @@
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 基础数据 设置锚点 复用
 BASE-DATA:
   common:
@@ -108,8 +108,8 @@ BASE-DATA:
       - 8airport
       - 9airport
     proxy-providers-common:
-      airport-interval: &airport-interval 84600
-      url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
+      #airport-interval: &airport-interval 84600
+      #url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
       proxy-file-path-1airport: &proxy-file-path-1airport myprovider/free-proxies/provider-1airport.yml
       url-2airport: &url-2airport "https://oxo.o00o.ooo/ooo" # 这里填入机场链接
       proxy-file-path-2airport: &proxy-file-path-2airport myprovider/free-proxies/provider-2airport.yml
@@ -121,8 +121,8 @@ BASE-DATA:
       proxy-file-path-5airport: &proxy-file-path-5airport myprovider/free-proxies/provider-5airport.yml
       url-6airport: &url-6airport "https://edptrojan.comorg.filegear-sg.me/SOSO" # 这里填入机场链接
       proxy-file-path-6airport: &proxy-file-path-6airport myprovider/free-proxies/provider-6airport.yml
-      url-7airport: &url-7airport "http://sub.store/download/%E5%9C%B0%E4%B8%BB%E5%AE%B6%E7%94%B5%E6%8A%A5%40dizhujiacl?target=ClashMeta" # 这里填入机场链接
-      proxy-file-path-7airport: &proxy-file-path-7airport myprovider/free-proxies/provider-7airport.yml
+      #url-7airport: &url-7airport "http://sub.store/download/%E5%9C%B0%E4%B8%BB%E5%AE%B6%E7%94%B5%E6%8A%A5%40dizhujiacl?target=ClashMeta" # 这里填入机场链接
+      #proxy-file-path-7airport: &proxy-file-path-7airport myprovider/free-proxies/provider-7airport.yml
       url-8airport: &url-8airport "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml" # 这里填入机
       proxy-file-path-8airport: &proxy-file-path-8airport myprovider/free-proxies/provider-8airport.yml
       url-9airport: &url-9airport "https://api.2c.lol/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fgo4sharing%2Fsub%2Fmain%2Fsub.yaml&insert=false"
@@ -506,18 +506,18 @@ proxy-groups:
       - ProxyChain_Start
       - ProxyChain_Landing
 proxy-providers:
-  1airport:
-    type: http
-    url: *url-1airport 
-    interval: *airport-interval
-    override: 
-      'additional-prefix': P1|
-    path: *proxy-file-path-1airport
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
+  #1airport:
+  #  type: http
+  #  url: *url-1airport 
+  #  interval: *airport-interval
+  #  override: 
+  #    'additional-prefix': P1|
+  #  path: *proxy-file-path-1airport
+  #  health-check:
+  #    enable: true
+  #    interval: *airport-interval
+  #    # lazy: true
+  #    url: *health-check-url
   2airport:
     type: http
     url: *url-2airport 
@@ -578,18 +578,18 @@ proxy-providers:
       interval: *airport-interval
       # lazy: true
       url: *health-check-url
-  7airport:
-    type: http
-    url: *url-7airport 
-    interval: *airport-interval
-    override: 
-      'additional-prefix': P7|
-    path: *proxy-file-path-7airport
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
+  #7airport:
+  #  type: http
+  #  url: *url-7airport 
+  #  interval: *airport-interval
+  #  override: 
+  #    'additional-prefix': P7|
+  #  path: *proxy-file-path-7airport
+  #  health-check:
+  #    enable: true
+  #    interval: *airport-interval
+  #    # lazy: true
+  #    url: *health-check-url
   8airport:
     type: http
     url: *url-8airport 
