@@ -100,13 +100,11 @@ BASE-DATA:
   
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use
-      - 1airport
       - 2airport
       - 3airport
       - 4airport
       - 5airport
       - 6airport
-      - 7airport
       - 8airport
       - 9airport
     proxy-providers-common:
