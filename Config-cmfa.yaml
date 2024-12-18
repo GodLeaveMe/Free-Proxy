@@ -119,9 +119,9 @@ BASE-DATA:
       proxy-file-path-3airport: &proxy-file-path-3airport myprovider/free-proxies/provider-3airport.yml
       url-4airport: &url-4airport "https://mxlsub.me/newfull" # 这里填入机场链接
       proxy-file-path-4airport: &proxy-file-path-4airport myprovider/free-proxies/provider-4airport.yml
-      url-5airport: &url-5airport "https://sovless.sosorg.nyc.mn/SOSO" # 这里填入机场链接
+      url-5airport: &url-5airport "https://edgvless.comorg.filegear-sg.me/SOSO" # 这里填入机场链接
       proxy-file-path-5airport: &proxy-file-path-5airport myprovider/free-proxies/provider-5airport.yml
-      url-6airport: &url-6airport "https://sotrojan.sosorg.nyc.mn/SOSO" # 这里填入机场链接
+      url-6airport: &url-6airport "https://edptrojan.comorg.filegear-sg.me/SOSO" # 这里填入机场链接
       proxy-file-path-6airport: &proxy-file-path-6airport myprovider/free-proxies/provider-6airport.yml
       url-7airport: &url-7airport "http://sub.store/download/%E5%9C%B0%E4%B8%BB%E5%AE%B6%E7%94%B5%E6%8A%A5%40dizhujiacl?target=ClashMeta" # 这里填入机场链接
       proxy-file-path-7airport: &proxy-file-path-7airport myprovider/free-proxies/provider-7airport.yml
