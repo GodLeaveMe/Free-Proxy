@@ -150,9 +150,9 @@
         # - warp
         # - local
       proxy-providers-common:
-        #airport-interval: &airport-interval 84600
+        airport-interval: &airport-interval 84600
         #url-1airport: &url-1airport "https://ovo.o00o.ooo/ooo" # 这里填入机场链接
-        proxy-file-path-1airport: &proxy-file-path-1airport myprovider/free-proxies/provider-1airport.yml
+        #proxy-file-path-1airport: &proxy-file-path-1airport myprovider/free-proxies/provider-1airport.yml
         url-2airport: &url-2airport "https://oxo.o00o.ooo/ooo"
         proxy-file-path-2airport: &proxy-file-path-2airport myprovider/free-proxies/provider-2airport.yml
         url-3airport: &url-3airport "https://mxlsub.me/free"
